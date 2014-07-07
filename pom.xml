@@ -18,8 +18,30 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <build>
+	  <plugins>
+ <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.1</version>
+            <executions>
+               <execution>
+                  <id>my-execution</id>
+                  <phase>package</phase>
+                  <goals>
+                     <goal>java</goal>
+                  </goals>
+               </execution>
+            </executions>
+            <configuration>
+               <mainClass>HomeWork5.App</mainClass>
+            </configuration>
+         </plugin>
+	  </plugins>
+	</build>
 </project>
